@@ -1,0 +1,138 @@
+.contact-footer{
+    height: 374px;
+    background-color: var(--light-blue);
+    display: flex;
+    padding: 80px 150px;
+    gap: 150px;
+    color: white;
+    justify-content: center;
+}
+
+.contact-footer h2{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.contact-footer p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px; /* 160% */
+}
+
+.footer-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 440px;
+}
+
+.footer-email{
+    border: none;
+    padding: 0 15px;
+    border-radius: 12px;
+    height: 50px;
+    color: #CED3D8;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-email::placeholder{
+    color: #CED3D8;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    top: 2px;
+}
+
+.socials-container{
+    flex: 0 2 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.socials-link{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    align-items: center;
+    gap: 5px;
+}
+
+.socials-link p{
+    font-size: 16px;
+}
+
+
+
+.info-footer{
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 80px;
+}
+
+.footer-info-container{
+    display: flex;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    gap: 40px;
+}
+
+@media (max-width:1020px) {
+    .contact-footer{
+        padding: 60px;
+        gap: 60px;
+    }
+    .footer-form{
+        flex: 1 1 0;
+    }
+    .socials-container{
+        flex: 1 1 0;
+    }
+}
+
+@media (max-width:960px) {
+    .info-footer{
+        height: auto;
+        align-items: flex-end;
+        padding:40px 20px;
+    }
+    .footer-info-container{
+        gap: 10px;
+    }
+    .footer-nav{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:550px) {
+    .contact-footer{
+        flex-direction: column;
+        height: auto;
+    }
+    .socials-container{
+        gap: 10px;
+    }
+    .footer-form p{
+        padding: 20px 0;
+    }
+}
+
+@media (max-width:390px) {
+    .info-footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .footer-nav{
+        align-items: center;
+    }
+    .contact-footer{
+        padding: 60px 20px;
+    }
+}

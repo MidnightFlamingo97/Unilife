@@ -1,13 +1,15 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './App.css';
+import Header from './Components/Header/Header';
+import {BrowserRouter} from 'react-router-dom'
+import Footer from './Components/Footer/Footer';
 
 function App() {
-
-
   return (
-    <div>
-
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Footer />
+    </BrowserRouter>
   );
 }
 
