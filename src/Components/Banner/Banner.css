@@ -1,0 +1,40 @@
+.banner{
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-background-img{
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(2px);
+    margin: -4px;
+}
+
+.banner-txt{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-direction: column;
+    max-width: 770px;
+    color: white;
+    text-align: center;
+    padding: 0 60px;
+}
+
+.banner-txt h1{
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.banner-txt p{
+    font-size: 24px;
+    font-weight: 400;
+}
