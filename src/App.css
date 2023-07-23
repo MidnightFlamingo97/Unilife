@@ -10,3 +10,56 @@
 :root{
     --light-blue:#00A2E1;
 }
+
+button{
+    color: white;
+    border: none;
+    border-radius: 12px;
+    background-color: #3A5295;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .1s ease-in;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+button:hover{
+    cursor: pointer;
+    top: -2px;
+    right: -2px;
+    -webkit-box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.3);
+    box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.3);
+}
+
+.filter-box{
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    display: flex;
+    position: absolute;
+    top: 480px;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+select{
+    border-radius: 12px;
+    border: 1px solid #CED3D8;
+    padding-left: 30px;
+    color: #CED3D8;
+    font-size: 20px;
+    font-weight: 400;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-image: url(/src/assets/expand_more_FILL0_wght300_GRAD0_opsz48\ 1.svg);
+}
+
+@media (max-width:744px) {
+    .filter-box{
+        top: 400px;
+    }
+}

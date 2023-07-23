@@ -23,7 +23,7 @@
     align-items: center;
     gap: 24px;
     flex-direction: column;
-    max-width: 770px;
+    max-width: 900px;
     color: white;
     text-align: center;
     padding: 0 60px;
@@ -37,4 +37,27 @@
 .banner-txt p{
     font-size: 24px;
     font-weight: 400;
+    line-height: 36px;
+}
+
+@media (max-width:744px) {
+    .banner{
+        height: 340px;
+    }
+    .no-shrink{
+        height: 420px;
+    }
+    .banner-txt h1{
+        font-size: 40px;
+    }
+    
+    .banner-txt p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:440px) {
+    .banner-txt{
+        padding: 0 20px;
+    }
 }

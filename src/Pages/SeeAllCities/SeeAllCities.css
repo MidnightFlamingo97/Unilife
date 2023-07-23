@@ -1,0 +1,55 @@
+.all-cities-title{
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.all-city-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px 80px 120px 80px;
+    gap:24px;
+}
+
+.city-btn{
+    padding: 30px;
+    color: black;
+    background-color: white;
+    border-radius: 24px;
+    border: 1px solid #CED3D8;
+}
+
+.city-btn:hover{
+    color: white;
+    background-color: #3A5295;
+    border: 1px solid #3A5295;
+}
+
+@media (max-width: 1000px) {
+    .all-city-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .all-cities-title{
+        margin-top: 40px;
+    }
+    .all-city-grid{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 60px 60px 60px;
+        gap:24px;
+    }
+}
+
+@media (max-width: 540px) {
+    .all-cities-title{
+        margin-top: 30px;           
+    }
+    .all-city-grid{
+        grid-template-columns: 1fr;
+        padding: 30px 60px 60px 60px;
+        gap:15px;
+    }
+}

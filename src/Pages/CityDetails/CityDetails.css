@@ -1,0 +1,156 @@
+.search-filter-container{
+    display: flex;
+    gap: 24px;
+    width: calc(100% - 160px);
+}
+
+.filter-container{
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    flex: 1 1 0;
+}
+
+.filter-container select{
+    background-position: calc(100% - 10px);
+    padding: 0 20px;
+    height: 50px;
+}
+
+.city-page-title{
+    margin: 160px 0 40px 0;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.property-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    padding: 0 80px;
+}
+
+.student-info{
+    border-radius: 24px;
+    background-color: #F6FAFD;
+    padding: 60px 40px;
+    margin: 120px 80px;
+    display: flex;
+    gap:80px;
+}
+
+.student-info-txt{
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+}
+
+.student-info-txt h2{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+
+.student-info-txt p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px; /* 160% */
+}
+
+
+.student-info-txt{
+    flex: 1 1 0;
+}
+
+
+
+.student-img{
+    flex: 1 1 0;
+    border-radius: 24px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
+
+@media (max-width:1220px){
+    .search-filter-container{
+        width: calc(100% - 80px);
+    }
+    .property-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        padding: 0 40px;
+    }
+    .student-info{
+        margin: 80px 40px;
+        display: flex;
+        gap:20px;
+    }
+}
+
+@media (max-width:1020px){
+    .search-filter-container{
+        display: grid;
+        gap: 18px 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .filter-container h3{
+        display: none;
+    }
+    .property-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .student-info{
+        flex-direction: column;
+        padding: 40px;
+    }
+    .student-info-txt{
+        text-align: center;
+    }
+}
+
+@media (max-width:744px){
+    .search-filter-container{
+        top:480px;
+    }
+}
+
+@media (max-width:700px){
+    .property-grid{
+        grid-template-columns: 1fr;
+    }
+    .search-filter-container{
+        padding: 20px 40px;
+        gap: 20px;
+    }
+}
+
+@media (max-width:590px){
+    .search-filter-container{
+        padding: 20px;
+        gap: 10px;
+        grid-template-columns: 1fr ;
+    }
+    .city-page-title{
+        font-size: 24px;
+        padding: 20px;
+    }
+}
+
+@media (max-width:430px){
+    .search-filter-container{
+        width: calc(100% - 40px);
+    }
+    .property-grid{
+        padding: 0 20px;
+    }
+    .student-info{
+        margin: 40px 20px;
+        padding: 20px;
+    }
+}

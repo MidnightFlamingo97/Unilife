@@ -2,9 +2,9 @@ import React from 'react'
 import './Banner.css'
 import bannerBackground from '../../assets/cover-img.png'
 
-const Banner = ({title, subTitle}) => {
+const Banner = ({title, subTitle, noShrink}) => {
   return (
-    <div className='banner'>
+    <div className={noShrink?'banner no-shrink':'banner'}>
         <div className='banner-txt'>
             <h1>{title}</h1>
             <p>{subTitle}</p>
