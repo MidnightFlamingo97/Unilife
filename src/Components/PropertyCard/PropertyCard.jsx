@@ -14,7 +14,7 @@ const PropertyCard = ({property}) => {
         <div className='main-info-container'>
             <div className='price-container'>
                 <h3>£{property.rent}</h3>
-                <p>pppw including bills</p>
+                <p>pw including bills</p>
             </div>
             <div className='room-info-container'>
                 <div className='room-info-block'>
