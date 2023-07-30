@@ -5,6 +5,8 @@ import {LiaBedSolid, LiaBathSolid} from 'react-icons/lia'
 import {IoLocationOutline} from 'react-icons/io5'
 import {PiHouseLight} from 'react-icons/pi'
 
+
+//generate property card by passing prop object of property
 const PropertyCard = ({property}) => {
   return (
     <Link to={`/home-details/${property._id}`} className='property-card'>

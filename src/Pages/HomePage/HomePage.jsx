@@ -12,25 +12,37 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const HomePage = () => {
 
+  //state to store array of all cities
   const [allCities, setAllCities] = useState([]);
+
+  //state to store value of chosen city from <select> element
   const [citySelect, setCitySelect] = useState('');
+
+  //state to store array of city names
   const [sortedCities, setSortedCities] = useState([]);
 
+  //function to update citySelect state from user selecting <option>
   const handleSelect = e => {setCitySelect(e.target.value)}
 
+  //declare nav for using useNavigate hook
   const nav = useNavigate()
 
+  //function to navigate to city details with city id
   const navigateToCity = city => {
 
+    //finds city id from city name
     const seletedCityId = allCities.find(item => item.name.toLowerCase() === city)._id
 
+    //navigate to city details with chosen id
     nav(`/city-details/${seletedCityId}`)
   }
 
+  //on first load => API call and store array of city objects in allCities state.
   useEffect(()=>{
     axios.get('https://unilife-server.herokuapp.com/cities?limit=20')
     .then(res=> {
       setAllCities(res.data.response);
+      //also set sortedCities state to just city names, organised alphabetically 
       setSortedCities(res.data.response.map(item => item.name).sort())
     })
     .catch(err => console.log(err))
@@ -107,7 +119,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <button>Search & Compare</button>
+            <Link to='/see-all-cities'><button>Search & Compare</button></Link>
           </div>
           <img src={personImg} className='person-img'/>
         </div> 

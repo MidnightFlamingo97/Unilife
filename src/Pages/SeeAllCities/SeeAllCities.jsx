@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 const SeeAllCities = () => {
+  
   //state to store array of all cities and organized array of all city names
   const [allCities, setAllCities] = useState([]);
   const [sortedCities, setSortedCities] = useState([]);

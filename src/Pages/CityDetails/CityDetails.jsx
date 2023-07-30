@@ -25,6 +25,9 @@ const CityDetails = () => {
     rent: 'any'
   });
 
+  //state for storing city info
+  const [cityInfo, setCityInfo] = useState({});
+
   //on first load
   useEffect(()=>{
     //retrieve all properties from chosen city (using cityId)
@@ -58,6 +61,11 @@ const CityDetails = () => {
         })()
       })
     })
+    .catch(err => console.log(err))
+
+    //API call and storing of city info
+    axios.get(`https://unilife-server.herokuapp.com/cities/${cityId}`)
+    .then(res => setCityInfo(res.data.data[0]))
     .catch(err => console.log(err))
   },[])
 
@@ -112,7 +120,7 @@ const CityDetails = () => {
           <select name='rent' value={filterOptions.rent} onChange={handleSearchChange}>
             <option value='any'>Any price</option>
             {
-              options.rentOptions?.map(item => <option key={item} value={item}>${item}</option>)
+              options.rentOptions?.map(item => <option key={item} value={item}>£{item}</option>)
             }
           </select>
         </div>
@@ -142,9 +150,9 @@ const CityDetails = () => {
 
       <div className='student-info'>
         <div className='student-info-txt'>
-          <h2>Being a student in Leeds</h2>
-          <p>Leeds is a lively and multicultural city with a large student population. It is quite a compact city, so it is easy to get around and has a community feel. Leeds is the perfect mix of city and town life and has something to offer to anyone who calls it home.</p>
-          <p>Leeds is home to three universities, the University of Leeds, Leeds Trinity University and Leeds Beckett University</p>
+          <h2>Being a student in {cityInfo.name}</h2>
+          <p>{cityInfo.student_life}</p>
+          <p>{cityInfo.universities}</p>
         </div>
         <div className='student-img' style={{backgroundImage: `url(${studentImg})`}}></div>
       </div>

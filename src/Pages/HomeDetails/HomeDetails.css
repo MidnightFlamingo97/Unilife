@@ -40,6 +40,18 @@
     height: 140px;
     object-fit: cover;
     border-radius: 12px;
+    position: relative;
+    transition: all .1s ease-in-out;
+}
+
+
+.sub-img:hover{
+    cursor: pointer;
+    top: -2px;
+    right: -2px;
+    -webkit-box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.3);
+    box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.3);
 }
 
 .home-main-info{
@@ -132,10 +144,17 @@
     font-weight: 400;
     background-color: white;
     border: 1px solid #CED3D8;
+    height: 50px;
 }
 
 .shortlist-hrt{
     font-size: 24px;
+}
+
+.shortlisted{
+    color:white;
+    background-color: #3A5295;
+    border-color: #3A5295;
 }
 
 .home-extra-info-container{
@@ -203,6 +222,25 @@
 .tick{
     color: #3A5295;
     font-size: 28px;
+}
+
+.booking-form-input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-form-left, .booking-form-right{
+    gap: 24px;
+}
+
+.booking-form-right{
+    justify-content: space-between;
+}
+
+textarea[name='message']{
+    flex: 0 1 200px;
 }
 
 @media (max-width:1110px){

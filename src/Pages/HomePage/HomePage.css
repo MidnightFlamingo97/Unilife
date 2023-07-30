@@ -6,7 +6,6 @@
 
 .search-city-box select{
     flex: 2 1 0;
-    background-position: calc(100% - 30px);
 }
 
 .search-city-box button{

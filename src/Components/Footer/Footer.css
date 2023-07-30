@@ -81,6 +81,18 @@
     gap: 40px;
 }
 
+.fake-link:hover{
+    cursor: pointer;
+}
+
+.footer-modal{
+    text-align: center;
+}
+
+.footer-modal p{
+    max-width: 100%;
+}
+
 @media (max-width:1020px) {
     .contact-footer{
         padding: 60px;
