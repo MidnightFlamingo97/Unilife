@@ -178,6 +178,7 @@ const HomeDetails = () => {
                     <div className='modal-complete'>
                       <h2>{bookingFormInput.name}, Thank you for your booking!</h2>
                       <p>{home.address?.street}, {home.address?.city}, {home.address?.postcode}</p>
+                      <p>This is just a portfolio website so nothing will actually happen. Thanks for using the form!</p>
                       <button onClick={resetBookingModal}>Back to site</button>
                     </div>
                     :
